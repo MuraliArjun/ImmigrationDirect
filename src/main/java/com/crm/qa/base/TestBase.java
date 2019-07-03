@@ -32,7 +32,7 @@ public class TestBase {
 	public static void initilization() {
 		String browserName = prop.getProperty("browsername");
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:/Users/Murali Arjun/Downloads/chromedriver_win32/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:/Users/Murali Arjun/Downloads/updatedChromeDriver/chromedriver_win32/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		
@@ -41,5 +41,6 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
+		
 	}
 }
